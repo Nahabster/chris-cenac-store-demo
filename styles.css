@@ -81,7 +81,14 @@ nav,
 .brand {
   gap: 0.7rem;
   font-weight: 900;
+  min-width: 0;
   text-transform: uppercase;
+}
+
+.brand span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .brand-mark {
@@ -1233,16 +1240,23 @@ footer p {
   }
 
   .site-header {
+    gap: 0.65rem;
     padding: 0.75rem 1rem;
   }
 
   .brand span:last-child {
-    display: none;
+    display: inline;
+    font-size: 0.78rem;
+    max-width: 7.8rem;
+  }
+
+  .brand {
+    gap: 0.55rem;
   }
 
   .header-action {
     min-height: 2.75rem;
-    padding-inline: 1rem;
+    padding-inline: 0.85rem;
   }
 
   .hero {
