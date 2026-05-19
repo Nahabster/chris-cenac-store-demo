@@ -1022,7 +1022,7 @@ footer p {
   }
 
   .hero-content {
-    order: 2;
+    order: -1;
     padding: 2.5rem 0 1rem;
   }
 
@@ -1077,16 +1077,16 @@ footer p {
   }
 
   .hero-panel {
-    min-height: 56svh;
+    min-height: 46svh;
   }
 
   .hero-content {
-    padding: 1.75rem 0.25rem 0.75rem;
+    padding: 1.75rem 0.25rem 1rem;
   }
 
   h1 {
-    font-size: clamp(4.8rem, 22vw, 6.8rem);
-    max-width: 6ch;
+    font-size: clamp(4.5rem, 19vw, 6.2rem);
+    max-width: 7ch;
   }
 
   h2 {
