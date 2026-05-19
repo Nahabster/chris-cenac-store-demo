@@ -1,6 +1,6 @@
-# Chris Cenac Jr. Store Demo
+# Chris Cenac Jr. Store
 
-Static demo for a Chris Cenac Jr. player hub and connected store.
+Static site for a Chris Cenac Jr. player hub and connected store.
 
 ## Local Preview
 

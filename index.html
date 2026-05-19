@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chris Cenac Jr. | Official Store</title>
+    <meta
+      name="description"
+      content="Official Chris Cenac Jr. player hub and store for gear, media, updates, and first access to new drops."
+    />
+    <meta name="theme-color" content="#08090b" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -103,6 +108,7 @@
           <img
             src="https://images.sidearmdev.com/resize?height=900&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuhcougars.com%2Fimages%2F2026%2F2%2F20%2FChris_Cenac_-_20260215_-_DSC04308_copy.jpg"
             alt="Chris Cenac Jr. announced during Houston starting lineups"
+            loading="lazy"
           />
         </div>
         <div class="timeline">
@@ -178,17 +184,17 @@
         <div class="collection-bar">
           <h2>Featured Collection</h2>
           <div class="filters" aria-label="Collection filters">
-            <button type="button">Best Sellers</button>
-            <button type="button">Tees</button>
-            <button type="button">Hoodies</button>
-            <button type="button">Accessories</button>
+            <button type="button" class="is-selected" data-filter="all" aria-pressed="true">Best Sellers</button>
+            <button type="button" data-filter="tee" aria-pressed="false">Tees</button>
+            <button type="button" data-filter="hoodie" aria-pressed="false">Hoodies</button>
+            <button type="button" data-filter="accessory" aria-pressed="false">Accessories</button>
           </div>
         </div>
 
         <div class="product-grid" aria-label="Featured products">
-          <article class="product-card">
+          <article class="product-card" data-category="hoodie">
             <div class="product-visual image-mockup">
-              <img src="assets/cenac-5-hoodie.png" alt="CENAC 5 black heavyweight hoodie mockup" />
+              <img src="assets/cenac-5-hoodie.png" alt="CENAC 5 black heavyweight hoodie mockup" loading="lazy" />
             </div>
             <div class="product-copy">
               <span class="product-type">Heavyweight hoodie</span>
@@ -216,9 +222,9 @@
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-category="tee">
             <div class="product-visual image-mockup">
-              <img src="assets/pressure-tee.png" alt="Pressure Tee black mineral wash t-shirt mockup" />
+              <img src="assets/pressure-tee.png" alt="Pressure Tee black mineral wash t-shirt mockup" loading="lazy" />
             </div>
             <div class="product-copy">
               <span class="product-type">Boxy tee</span>
@@ -246,9 +252,9 @@
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-category="tee">
             <div class="product-visual image-mockup">
-              <img src="assets/gold-medalist-tee.png" alt="Gold Medalist cream t-shirt mockup" />
+              <img src="assets/gold-medalist-tee.png" alt="Gold Medalist cream t-shirt mockup" loading="lazy" />
             </div>
             <div class="product-copy">
               <span class="product-type">Premium tee</span>
@@ -276,9 +282,9 @@
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-category="accessory">
             <div class="product-visual image-mockup">
-              <img src="assets/icon-sticker-pack.png" alt="Four piece Chris Cenac Jr. sticker pack mockup" />
+              <img src="assets/icon-sticker-pack.png" alt="Four piece Chris Cenac Jr. sticker pack mockup" loading="lazy" />
             </div>
             <div class="product-copy">
               <span class="product-type">Sticker pack</span>
@@ -305,34 +311,33 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Cenac circle</p>
-            <h2>For the ones locked in early.</h2>
+            <h2>A home base for the fanbase.</h2>
           </div>
           <p>
-            From New Orleans runs to Houston lights, this is where the story lives:
-            the work, the moments, the releases, and the people riding with Chris
-            before the next chapter gets loud.
+            One official destination for Chris' story, social traffic, media moments,
+            limited product releases, and the supporters following the rise in real time.
           </p>
         </div>
         <div class="launch-grid">
           <article>
             <span>01</span>
-            <h3>The Work</h3>
-            <p>Training days, film sessions, travel, recovery, and the routine behind the rise.</p>
+            <h3>Player Hub</h3>
+            <p>Keep the profile, highlights, links, and updates in one polished destination.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>The Drops</h3>
-            <p>Limited pieces inspired by pressure, patience, STRIVE, and the number five.</p>
+            <h3>Limited Drops</h3>
+            <p>Release focused pieces tied to moments fans already recognize and share.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>The Moments</h3>
-            <p>Game nights, announcements, docuseries episodes, and the milestones in between.</p>
+            <h3>First Access</h3>
+            <p>Build a real audience list for restocks, new capsules, and major announcements.</p>
           </article>
           <article>
             <span>04</span>
-            <h3>The Circle</h3>
-            <p>First access for the fans who have been here before the lights get brighter.</p>
+            <h3>Scalable Model</h3>
+            <p>Keep Chris' store independent while using the same system for future clients.</p>
           </article>
         </div>
       </section>
@@ -386,10 +391,31 @@
           <span>Subtotal</span>
           <strong class="cart-total">$0</strong>
         </div>
-        <button type="button">Checkout</button>
+        <button class="checkout-button" type="button">Request Drop Access</button>
       </div>
     </aside>
     <div class="cart-scrim" hidden></div>
+
+    <div class="drop-modal" role="dialog" aria-modal="true" aria-labelledby="drop-title" hidden>
+      <div class="drop-modal-panel">
+        <button class="modal-close" type="button" aria-label="Close drop access form">Close</button>
+        <p class="eyebrow">First access</p>
+        <h2 id="drop-title">Reserve Your Spot</h2>
+        <p>
+          Join the early list for release timing, restock alerts, and checkout details
+          when the Chris Cenac Jr. capsule opens.
+        </p>
+        <form class="drop-form">
+          <label for="drop-name">Name</label>
+          <input id="drop-name" name="name" type="text" placeholder="Full name" required />
+          <label for="drop-email">Email</label>
+          <input id="drop-email" name="email" type="email" placeholder="you@email.com" required />
+          <label for="drop-phone">Phone <span>Optional</span></label>
+          <input id="drop-phone" name="phone" type="tel" placeholder="Text updates" />
+          <button type="submit">Join First Access</button>
+        </form>
+      </div>
+    </div>
 
     <div class="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
